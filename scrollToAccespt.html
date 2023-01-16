@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll To Accept</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="terms-and-condition">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+          recusandae ratione magni porro accusamus obcaecati, quam atque quis
+          nam odio id saepe culpa doloremque illo eveniet esse quaerat animi
+          expedita consectetur blanditiis placeat facere? Recusandae atque alias
+          quidem aspernatur laboriosam velit beatae tempore tenetur soluta,
+          nulla vel aliquid, error laudantium officiis officia fugiat. Doloribus
+          deserunt repellat alias illum distinctio veniam. Lorem, ipsum dolor
+          sit amet consectetur adipisicing elit. Corrupti recusandae ratione
+          magni porro accusamus obcaecati, quam atque quis nam odio id saepe
+          culpa doloremque illo eveniet esse quaerat animi expedita consectetur
+          blanditiis placeat facere? Recusandae atque alias quidem aspernatur
+          laboriosam velit beatae tempore tenetur soluta, nulla vel aliquid,
+          error laudantium officiis officia fugiat. Doloribus deserunt repellat
+          alias illum distinctio veniam.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti
+          earum alias harum dolor error cupiditate, sunt eos ad at labore ipsam
+          iste asperiores consequatur consequuntur nemo tempora perspiciatis
+          laborum molestias deleniti fugiat eius aspernatur assumenda ex
+          laudantium! Error praesentium ullam animi, vero quasi dolorum mollitia
+          quas laborum omnis illo, eveniet aliquam tempora soluta esse itaque,
+          non ea! Architecto aspernatur, dolores ipsum quos perspiciatis quaerat
+          libero earum distinctio. Sequi impedit ipsam, libero doloribus maxime
+          quidem itaque provident sunt optio illum officia inventore quod facere
+          quos! Saepe sequi cum sapiente voluptatum? Reiciendis ex voluptate,
+          hic cumque accusamus aspernatur optio maxime eius eos.
+        </p>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloremque
+          inventore veniam pariatur amet sequi nam recusandae delectus tempora
+          quos! Odit adipisci neque pariatur dolorem, nihil animi eum
+          voluptatum, sunt at beatae recusandae consequuntur. Cumque dolorum
+          corporis doloremque magni odit incidunt impedit unde alias porro quam
+          fuga sapiente hic minima a quia necessitatibus adipisci nam
+          architecto, quis modi debitis. Esse debitis ipsam, perspiciatis eaque
+          laborum ad id nisi odio amet exercitationem! Lorem ipsum dolor, sit
+          amet consectetur adipisicing elit. Consequuntur vel molestiae deleniti
+          numquam quaerat tenetur sequi facilis quam modi sint, ipsa vitae quod
+          perferendis illum dolores aliquid dolorem dignissimos? Nobis fugit
+          veritatis expedita quae suscipit ducimus nesciunt quo reprehenderit
+          optio, eius ut enim corporis obcaecati totam? Pariatur iusto quasi
+          accusantium esse nesciunt tempora quidem explicabo illum, quia cumque,
+          consequatur fuga a suscipit ipsum impedit nobis temporibus! Sed unde
+          ab porro impedit, aliquam inventore, illo placeat, dicta molestiae
+          harum vero magnam?
+        </p>
+        <hr />
+      </div>
+      <button class="accept" disabled>Accept</button>
+    </div>
+    <script src="./scrollToAccept.js"></script>
+
+    <style>
+      body {
+        background-color: burlywood;
+      }
+      .wrapper {
+        width: 30%;
+      }
+      .terms-and-condition {
+        width: 300px;
+        height: 400px;
+        overflow: scroll;
+        margin: 50px auto;
+        padding: 20px;
+        border: 1px solid #000;
+      }
+
+      .accept {
+        /* width: 100%; */
+        background: #ff0000;
+        color: white;
+        padding: 15px;
+        font-size: 1rem;
+        transition: all 0.2s;
+      }
+
+      button[disabled] {
+        opacity: 0.1;
+        transform: translateX(-100%);
+      }
+    </style>
+  </body>
+</html>

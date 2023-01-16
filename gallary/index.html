@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallary</title>
+    <style>
+      .gallaries {
+        display: flex;
+        flex-flow: column wrap;
+        gap: 50px;
+      }
+      .gallary {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        border: 3px solid blue;
+        justify-content: center;
+        padding: 50px 0;
+      }
+
+      .gallary img {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+      }
+      .modal {
+        position: fixed;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 2;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        pointer-events: none;
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+
+      .modal.open {
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      .modalInner {
+        border-radius: 4px;
+        background: white;
+        box-shadow: 0 0 10px 10px rgba(0, 0, 0, 0.05);
+        transform: translateY(-100vh);
+        transition: all 0.5s;
+        max-width: 1000px;
+        height: cal(100vh - 500px);
+        display: grid;
+        grid-template-columns: 50px 1fr 50px;
+        color: black;
+        margin: 3rem;
+      }
+      .modal.open .modalInner {
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gallaries">
+      <div class="gallary gallary1">
+        <img
+          src="./images/bag1.jpg"
+          alt="photo1"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/jacket.jpg"
+          alt="photo2"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/kurti.jpg"
+          alt="photo3"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/shoes2.gif"
+          alt="photo1"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/jacket2.jpg"
+          alt="photo1"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/wallet.jpg"
+          alt="photo1"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/watch2.jpg"
+          alt="photo1"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/bag2.jpg"
+          alt="photo1"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/suit.jpg"
+          alt="photo1"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/watch1.jpg"
+          alt="photo1"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/shoes4.gif"
+          alt="photo1"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/watch5.jpg"
+          alt="photo1"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+      </div>
+      <div class="gallary gallary2">
+        <img
+          src="./images/bag1.jpg"
+          alt="photo1"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/jacket.jpg"
+          alt="photo2"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/kurti.jpg"
+          alt="photo3"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/shoes2.gif"
+          alt="photo1"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/jacket2.jpg"
+          alt="photo1"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/wallet.jpg"
+          alt="photo1"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/watch2.jpg"
+          alt="photo1"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/bag2.jpg"
+          alt="photo1"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/suit.jpg"
+          alt="photo1"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/watch1.jpg"
+          alt="photo1"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/shoes4.gif"
+          alt="photo1"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+
+        <img
+          src="./images/watch5.jpg"
+          alt="photo1"
+          tabindex="0"
+          title="This is the title of the image"
+          data-description="This is the description of the image"
+        />
+      </div>
+    </div>
+    <div class="modal">
+      <div class="modalInner">
+        <button class="prev" aria-label="Previous Photo">←</button>
+        <figure>
+          <img src="./images/bag1.jpg" />
+          <figcaption>
+            <h2>Test Title</h2>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor
+              dignissimos obcaecati nisi placeat eaque voluptate, exercitationem
+              eius? Non, iusto provident itaque, voluptate labore a alias
+              officia, amet sunt pariatur praesentium tenetur voluptatibus
+              dolores mollitia quasi aliquid assumenda possimus maiores
+              exercitationem!
+            </p>
+          </figcaption>
+        </figure>
+        <button class="next" aria-label="Next Photo">→</button>
+      </div>
+    </div>
+    <script src="./gallary.js"></script>
+  </body>
+</html>
